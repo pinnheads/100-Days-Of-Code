@@ -94,4 +94,6 @@ Day_100/
 
 Day_*/Twitter_Upload
 
+Day_*/__pycache__/
+
 .vscode

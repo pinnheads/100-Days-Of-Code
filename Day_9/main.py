@@ -45,6 +45,5 @@ travel_log = [
 },
 ]
 
-
 # Wipe a dictionary
 programming_dictionary = {}

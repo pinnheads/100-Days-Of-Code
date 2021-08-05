@@ -1,19 +1,22 @@
 What is 100 Days of Code?
 =========================================================================
+
 - It is just as the name suggests, you code for 100 days, everyday.
- 
+
 The Rules
 -----------------------------------------------------------------------
+
 1. Code minimum an hour every day for the next 100 days.
 2. Tweet your progress every day with the #100DaysOfCode hashtag.
 3. Upload to Github
 
 Official Site for 100 Days of Code
 ------------------------------------------------------------------------
-https://www.100daysofcode.com/
+<https://www.100daysofcode.com/>
 
 My Progress
-========================================================================
+------------------------------------------------------------------------
+
 - [x] Day 1
 - [x] Day 2
 - [x] Day 3
@@ -30,7 +33,7 @@ My Progress
 - [x] Day 14
 - [x] Day 15
 - [x] Day 16
-- [ ] Day 17
+- [x] Day 17
 - [ ] Day 18
 - [ ] Day 19
 - [ ] Day 20
@@ -114,4 +117,3 @@ My Progress
 - [ ] Day 98
 - [ ] Day 99
 - [ ] Day 100
-

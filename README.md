@@ -43,7 +43,7 @@ My Progress
 - [x] Day 24
 - [x] Day 25
 - [x] Day 26
-- [ ] Day 27
+- [x] Day 27
 - [ ] Day 28
 - [ ] Day 29
 - [ ] Day 30

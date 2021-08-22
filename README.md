@@ -50,7 +50,7 @@ My Progress
 - [x] Day 31
 - [x] Day 32
 - [x] Day 33
-- [ ] Day 34
+- [x] Day 34
 - [ ] Day 35
 - [ ] Day 36
 - [ ] Day 37

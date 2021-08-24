@@ -52,7 +52,7 @@ My Progress
 - [x] Day 33
 - [x] Day 34
 - [x] Day 35
-- [ ] Day 36
+- [x] Day 36
 - [ ] Day 37
 - [ ] Day 38
 - [ ] Day 39

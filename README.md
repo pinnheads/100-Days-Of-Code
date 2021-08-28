@@ -56,7 +56,7 @@ My Progress
 - [x] Day 37
 - [x] Day 38
 - [x] Day 39
-- [ ] Day 40
+- [x] Day 40
 - [ ] Day 41
 - [ ] Day 42
 - [ ] Day 43

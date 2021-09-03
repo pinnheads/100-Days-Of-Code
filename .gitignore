@@ -54,6 +54,8 @@ Day_99/
 Day_100/
 
 Day_*/Twitter_Upload
+Day_*/.env
+Day_*/*token*
 
 Day_*/__pycache__/
 

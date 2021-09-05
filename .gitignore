@@ -55,6 +55,9 @@ Day_*/Twitter_Upload
 Day_*/.env
 Day_*/*token*
 
+*/*.log
+*/*/*.log
+
 Day_*/__pycache__/
 
 .vscode

@@ -68,7 +68,7 @@ My Progress
 - [x] Day 48
 - [x] Day 49
 - [x] Day 50
-- [ ] Day 51
+- [x] Day 51
 - [ ] Day 52
 - [ ] Day 53
 - [ ] Day 54

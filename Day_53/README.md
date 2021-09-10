@@ -11,7 +11,7 @@ Things I Learned
 I also made project to get all the zillow listings using BeautifulSoup on a
 specific page and insert that data using Selenium and google forms.
 
-![Gif](Project/zillow_git.gif)
+<!-- ![Gif](Project/zillow_git.gif) -->
 
 ![Sheet](Project/sheet.png)
 

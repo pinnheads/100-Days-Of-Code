@@ -44,6 +44,9 @@ Day_*/Twitter_Upload
 Day_*/.env
 Day_*/*token*
 
+*/.idea
+.idea
+
 */*.log
 */*/*.log
 

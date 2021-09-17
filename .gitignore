@@ -49,6 +49,7 @@ Day_*/*token*
 */*.log
 */*/*.log
 
+*__pycache__*
 Day_*/__pycache__/
 
 .vscode

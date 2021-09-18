@@ -45,6 +45,9 @@ Day_*/*token*
 */.idea
 .idea
 
+*.lock
+*.toml
+
 */*.log
 */*/*.log
 

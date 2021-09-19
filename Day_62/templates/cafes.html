@@ -1,25 +1,37 @@
-{% extends 'bootstrap/base.html' %}
-
-{% block title %}Restaurants{% endblock %}
-
-{% block content %}
+{% extends 'index.html' %} {{super()}} {% block title %}Restaurants{% endblock %} {% block content %}
 
 <div class="container">
-  <div class="row">
-    <div class="col-sm-12">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>All Cafes</h1>
 
-      <h1>All Cafes</h1>
-
-	  <table class="table">
-          <!-- This is where you will write the code to render a Bootstrap 
+            <table class="table">
+                <!-- This is where you will write the code to render a Bootstrap 
           Table that contains all the information from the 
           cafe-data.csv file. -->
-  	  </table>
+                <table class="table">
+                    <thead>
+                        {% for heading in cafes[0]%}
+                        <th scope="col">{{heading}}</th>
+                        {%endfor%}
+                    </thead>
+                    <tbody>
+                        {%for index in cafes[1:]%}
+                        <tr>
+                            {% for data in index%} {%if "http" in data%}
+                            <td><a href="{{data}}">Maps Link</a></td>
+                            {%else%}
+                            <td>{{data}}</td>
+                            {%endif%} {%endfor%}
+                        </tr>
+                        {%endfor%}
+                    </tbody>
+                </table>
+            </table>
 
-      <p><a href="#">Return to index page</a></p>
-
+            <p><a href="{{url_for('home')}}">Return to index page</a></p>
+        </div>
     </div>
-  </div>
 </div>
 
 {% endblock %}

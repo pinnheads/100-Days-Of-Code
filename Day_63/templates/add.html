@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Add Book</title>
+    </head>
+    <body>
+        <form action="/add" method="POST">
+            <label>Book Name</label>
+            <input type="text" name="b_name" />
+            <label>Book Author</label>
+            <input type="text" name="b_author" />
+            <label>Rating</label>
+            <input type="text" name="b_rating" />
+            <button type="submit">Add Book</button>
+        </form>
+        <a href="{{url_for('home')}}">Back to Home Page</a>
+    </body>
+</html>

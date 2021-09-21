@@ -81,7 +81,7 @@ My Progress
 - [x] Day 61
 - [x] Day 62
 - [x] Day 63
-- [ ] Day 64
+- [x] Day 64
 - [ ] Day 65
 - [ ] Day 66
 - [ ] Day 67

@@ -50,4 +50,3 @@ Day_*/*token*
 Day_*/__pycache__/
 
 .vscode
-*.db

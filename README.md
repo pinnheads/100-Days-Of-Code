@@ -89,7 +89,7 @@ My Progress
 - [x] Day 69
 - [x] Day 70
 - [x] Day 71
-- [ ] Day 72
+- [x] Day 72
 - [ ] Day 73
 - [ ] Day 74
 - [ ] Day 75

@@ -40,7 +40,7 @@ codes = {
 }
 
 
-def letter_to_morse(letter):
+def letter_to_morse(letter: str) -> str:
     """Converts letter to equivalent morse code"""
     letter = letter.upper()
     if letter == " ":
@@ -52,7 +52,7 @@ def letter_to_morse(letter):
             return letter
 
 
-def string_to_morse(text):
+def string_to_morse(text: str) -> str:
     """Converts a string to morse code"""
     morse_code = ""
     message = ""

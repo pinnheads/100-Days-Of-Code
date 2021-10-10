@@ -2,7 +2,7 @@
 
 ## Goal/Challenge
 
-To create/design a personal portfolio
+To create a CLI based Tic-Tac-Toe game for 2 players
 
 ### Result
 

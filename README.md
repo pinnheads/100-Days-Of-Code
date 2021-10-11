@@ -101,7 +101,7 @@ My Progress
 - [x] Day 81
 - [x] Day 82
 - [x] Day 83
-- [ ] Day 84
+- [x] Day 84
 - [ ] Day 85
 - [ ] Day 86
 - [ ] Day 87

@@ -37,6 +37,7 @@ def measure_start_time():
         command=measure_end_time,
     )
     start_time = dt.datetime.now().time()
+    print(start_time)
     start_time_delta = dt.timedelta(
         hours=start_time.hour,
         minutes=start_time.minute,
@@ -65,24 +66,28 @@ def measure_end_time():
         foreground=GREY,
         command=measure_start_time,
     )
+    print(end_time)
     END_TIME = end_time_delta
     calculate_wpm(END_TIME, START_TIME)
 
 
 def calculate_wpm(end, start):
     total_time = str(end - start)
-    total_words = input_area.get(1.0)
+    print(total_time)
+    total_words = input_area.get("1.0", END)
+    print(total_words)
     word_count = len(total_words.split(" "))
     (h, m, s) = total_time.split(":")
     result = int(h) * 3600 + int(m) * 60 + int(s)
-    wpm = word_count / result
+    print(word_count, result)
+    wpm = round((word_count / result) * 100, 2)
     result_label = Label(
         text=f"SPEED {wpm}",
         font=(FONT_NAME, 18),
         bg=PINK,
         foreground=DARK,
     )
-    length_label.grid(row=1, column=0, sticky=W, pady=2, padx=2)
+    result_label.grid(row=1, column=0, sticky=W, pady=2, padx=2)
 
 
 paragraph = gen.paragraph() + "\n" + gen.paragraph()
@@ -128,7 +133,7 @@ generate_btn = Button(
     text="Start",
     highlightthickness=0,
     bg=DARK_GREEN,
-    font=(FONT_NAME, 10, "bold"),
+    font=(FONT_NAME, 14, "bold"),
     activebackground=GREEN,
     activeforeground=GREY,
     width=16,
@@ -136,7 +141,9 @@ generate_btn = Button(
     foreground=GREY,
     command=measure_start_time,
 )
-generate_btn.grid(row=3, column=1, padx=5, pady=5)
+generate_btn.grid(
+    row=3, column=0, padx=10, pady=10, sticky="NESW", columnspan=2
+)
 
 input_area = Text(window, height=16, width=100, wrap=WORD)
 input_area.grid(row=4, column=0, columnspan=2)

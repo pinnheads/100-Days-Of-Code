@@ -1,0 +1,145 @@
+{% include 'header.html' %}
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{{ all_cafes[0].img_url }}" class="d-block w-100 carousel-image" alt="{{all_cafes[0].name}}" />
+        </div>
+        {% for cafe in all_cafes[1::2]%}
+        <div class="carousel-item">
+            <img src="{{ cafe.img_url }}" class="d-block w-100 carousel-image" alt="..." />
+        </div>
+        {% endfor %}
+    </div>
+    <div class="bg-text">
+        <h1>Welcome to the Cafe & Wifi</h1>
+        <h5>
+            Find the perfect place to work, hangout, have a meeting, take calls while having a refreshing cup of coffee
+        </h5>
+    </div>
+</div>
+
+<h2>All Cafes</h2>
+<hr />
+
+<div class="container-fluid" id="main-content">
+    {% set rows = 3 %} {% set cols = 3 %} {% for cafe in all_cafes %} {% if loop.index0 // rows != (loop.index0 - 1) //
+    rows %}
+    <div class="row">
+        {% endif %}
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card" style="width: 18rem">
+                <img src="{{ cafe.img_url }}" class="card-img-top" alt="{{cafe.name}}" />
+                <div class="card-body">
+                    <h5 class="card-title">{{cafe.name}}</h5>
+                    <a href="{{cafe.map_url}}" target="_blank" class="card-subtitle mb-2 text-muted location">
+                        <i class="fas fa-street-view"></i> 
+                        {{cafe.location}}
+                    </a>
+                    <div class="row">
+                        <div class="col seats">
+                            <p class='description'><span class="icon">🪑</span> {{cafe.seats}}</p>
+                        </div>
+                        <div class="col price">
+                            <p class='description'><span class="icon">💵</span> {{cafe.coffee_price}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col features">
+                            {% if cafe.has_sockets%}
+                            <span class="badge rounded-pill bg-secondary">
+                                <i class="fas fa-sm fa-plug"></i>
+                            </span>
+                            {% endif %} {% if cafe.has_toilet%}
+                            <span class="badge rounded-pill bg-secondary">
+                                <i class="fas fa-sm fa-restroom"></i>
+                            </span>
+                            {% endif %} {% if cafe.can_take_calls%}
+                            <span class="badge rounded-pill bg-secondary">
+                                <i class="fas fa-sm fa-phone-alt"></i>
+                            </span>
+                            {% endif %} {% if cafe.has_wifi%}
+                            <span class="badge rounded-pill bg-secondary">
+                                <i class="fas fa-sm fa-wifi"></i>
+                            </span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-{{cafe.id}}">
+                                Open
+                            </button>
+                        </div>
+                        <div class="col">
+                            <a class="text-muted" href="{{url_for('delete_cafe', cafe_id=cafe.id)}}">Report Closed</a>
+                        </div>
+                    </div>
+                    
+                    <div
+                        class="modal fade"
+                        id="modal-{{cafe.id}}"
+                        tabindex="-1"
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true"
+                    >
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">{{cafe.name}}</h5>
+                                    <button
+                                        type="button"
+                                        class="btn-close"
+                                        data-bs-dismiss="modal"
+                                        aria-label="Close"
+                                    ></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12">
+                                            <img class="modal-img" src="{{ cafe.img_url }}" alt="{{cafe.name}}" />
+                                        </div>
+                                        <br>
+                                        <div class="col-lg-6">
+                                            <p> <strong>Location:</strong> <a href="{{cafe.map_url}}">{{cafe.location}}</a> </p>
+                                            <p> <strong>No. of Seats:</strong> {{cafe.seats}} </p>
+                                            <p> <strong>Coffee Price:</strong> {{cafe.coffee_price}} </p>
+                                        </div>                                        
+                                    </div>
+                                    <div class="modal-footer">
+                                            {% if cafe.has_sockets%}
+                                            <span class="badge rounded-pill bg-secondary">
+                                                <i class="fas fa-sm fa-plug"></i>
+                                            </span>
+                                            {% endif %} {% if cafe.has_toilet%}
+                                            <span class="badge rounded-pill bg-secondary">
+                                                <i class="fas fa-sm fa-restroom"></i>
+                                            </span>
+                                            {% endif %} {% if cafe.can_take_calls%}
+                                            <span class="badge rounded-pill bg-secondary">
+                                                <i class="fas fa-sm fa-phone-alt"></i>
+                                            </span>
+                                            {% endif %} {% if cafe.has_wifi%}
+                                            <span class="badge rounded-pill bg-secondary">
+                                                <i class="fas fa-sm fa-wifi"></i>
+                                            </span>
+                                            {% endif %}
+                                            <button type="button" class="btn btn-warning" data-bs-dismiss="modal">
+                                                Close
+                                            </button>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% if loop.index0 % cols == 2 %}
+        </div>
+        {% endif %} {% endfor %}
+    </div>
+
+    {%include 'footer.html'%}
+</div>

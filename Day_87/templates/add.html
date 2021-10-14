@@ -1,0 +1,78 @@
+{%include 'header.html'%}
+<div class="container">
+    <form class="form" action="{{url_for('add_cafe')}}" method="POST">
+        <div class="mb-3">
+            <label for="CafeName" class="form-label">Cafe Name</label>
+            <input
+                type="text"
+                name="name"
+                class="form-control"
+                id="CafeName"
+                aria-describedby="emailHelp"
+                required
+                aria-required="true"
+            />
+        </div>
+        <div class="mb-3">
+            <label for="Password1" class="form-label">Cafe Location</label>
+            <input type="text" name="location" class="form-control" id="Password1" required aria-required="true" />
+        </div>
+        <div class="mb-3">
+            <label for="MapUrl" class="form-label">Map Url</label>
+            <input type="url" name="map_url" class="form-control" id="MapUrl" required aria-required="true" />
+        </div>
+        <div class="mb-3">
+            <label for="imgUrl" class="form-label">Image Url</label>
+            <input type="url" name="img_url" class="form-control" id="imgUrl" required aria-required="true" />
+        </div>
+        <div class="mb-3">
+            <label for="seats" class="form-label">Number of Seats</label>
+            <input type="text" name="seats" class="form-control" id="seats" required aria-required="true" />
+        </div>
+        <div class="mb-3">
+            <label for="coffee_price" class="form-label">Coffee Price</label>
+            <input
+                type="text"
+                name="coffee_price"
+                class="form-control"
+                id="coffee_price"
+                required
+                aria-required="true"
+            />
+        </div>
+        <div class="mb-3 form-check">
+            <input type="hidden" name="has_toilet" value="0" class="form-check-input" id="toilets" /><input
+                type="checkbox"
+                class="form-check-input"
+                onclick="this.previousSibling.value=1-this.previousSibling.value"
+            />
+            <label class="form-check-label" for="toilets">Toilets</label>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="hidden" name="has_wifi" value="0" class="form-check-input" id="wifi" /><input
+                type="checkbox"
+                class="form-check-input"
+                onclick="this.previousSibling.value=1-this.previousSibling.value"
+            />
+            <label class="form-check-label" for="wifi">Wifi Available</label>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="hidden" name="can_take_calls" value="0" class="form-check-input" id="calls" /><input
+                type="checkbox"
+                class="form-check-input"
+                onclick="this.previousSibling.value=1-this.previousSibling.value"
+            />
+            <label class="form-check-label" for="calls">Can Take Calls</label>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="hidden" name="has_sockets" value="0" class="form-check-input" id="power" /><input
+                type="checkbox"
+                class="form-check-input"
+                onclick="this.previousSibling.value=1-this.previousSibling.value"
+            />
+            <label class="form-check-label" for="power">Power Sockets</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{%include 'footer.html'%}

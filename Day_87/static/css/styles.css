@@ -1,0 +1,109 @@
+html,
+body {
+    height: 100%;
+    background-color: #f1dcf7;
+}
+
+#root {
+    padding: 0 0 2% 0;
+}
+
+.navbar {
+    background-color: #784d78;
+}
+
+.carousel-image {
+    opacity: 0.4;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    height: 360px;
+}
+
+.bg-text {
+    background-color: rgba(120, 77, 120, 0.2); /* Fallback color */
+    /* background-color: rgba(0, 0, 0, 0.4); Black w/opacity/see-through */
+    color: #000;
+    font-weight: bold;
+    /* border: 3px solid #f1f1f1; */
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.carousel {
+    height: 360px;
+    margin-bottom: 5%;
+}
+
+#main-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    text-align: left;
+}
+
+.card {
+    margin: 15% 10%;
+}
+
+.description {
+    margin: 0;
+}
+.icon {
+    font-size: 20px;
+}
+
+.features {
+    margin: 2% 0 2% 0;
+    font-size: 18px;
+}
+.seats,
+.price {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    text-align: left;
+    margin: 0;
+    padding: 0 0 0 8px;
+}
+.card-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+}
+
+.card-img-top {
+    height: 200px; /* height of container */
+    object-fit: cover;
+    object-position: 20% 10%;
+}
+
+.modal-img {
+    height: 400px; /* height of container */
+    width: 100%;
+}
+.container-fluid {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form {
+    margin: 3% 0 0 0;
+}

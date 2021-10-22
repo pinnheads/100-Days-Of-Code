@@ -1,0 +1,51 @@
+{% extends 'base.html' %} {% block content %}
+<div style="background-color: coral; height: 100vh">
+    <div class="container h-100">
+        <div class="row justify-content-center" style="text-align: center">
+            <div class="col-md-12 col-sm-12 col-xs-12 pt-5">
+                <form method="POST" class="card border-0 p-3 shadow-sm">
+                    <div class="form-group">
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="word"
+                            placeholder="Word"
+                            required
+                            autocomplete="off"
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <button class="btn btn-info btn-block">Get Meaning</button>
+                    </div>
+                </form>
+            </div>
+            {%if data%} {%if data[0]%}
+            <h3 style="padding: 20px">{{data[0]['message']}}</h3>
+            {%elif data['word']%}
+            <h3 style="padding: 20px">Word: {{data['word']}}</h3>
+            <div style="margin-top: 20px">
+                <div class="row">
+                    {%for definition in data['definitions']%}
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header">{{definition['type']}}</div>
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>Meaning:</strong> {{definition['definition']}}</h5>
+                                <i
+                                    ><p class="card-text">
+                                        <strong>Example:</strong>
+                                        {{definition['example']}}
+                                    </p>
+                                </i>
+                            </div>
+                        </div>
+                    </div>
+                    {%endfor%}
+                </div>
+            </div>
+            {%endif%} {%endif%}
+        </div>
+    </div>
+</div>
+{% endblock content %}

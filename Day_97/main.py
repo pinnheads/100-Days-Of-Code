@@ -1,8 +1,6 @@
 import psutil as ps
 import os
 
-os.system('notify-send -u critical "test"')
-
 
 def read_cpu_temp():
     return ps.sensors_temperatures()["k10temp"][0].current
